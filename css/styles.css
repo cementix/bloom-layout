@@ -1,0 +1,86 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 798px;
+  width: 100vw;
+  background-color: #0A2640;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.nav .logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.nav .logo a {
+  text-decoration: none;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.nav .navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.nav .navLinks li {
+  list-style: none;
+}
+.nav .navLinks li :hover {
+  color: #65E4A3;
+  transition: 0.5s;
+}
+.nav .navLinks a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.nav .navLinks .logInButton {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #0A2640;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  width: 128px;
+  height: 40px;
+  cursor: pointer;
+  border: 0;
+}
+.nav .toggleNavButton {
+  width: 30px;
+  color: white;
+  height: 50px;
+  width: 50px;
+  margin: 10px 10px;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav .logo {
+    align-self: flex-start;
+  }
+  .nav .navLinks {
+    display: none;
+  }
+  .nav .toggleNavButton {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

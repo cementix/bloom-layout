@@ -1,5 +1,6 @@
 body {
     height: 100vh;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -13,14 +14,18 @@ header {
 .nav {
     display: flex;
     justify-content: space-between;
-    margin-right: 2%;
-    margin-left: 2%;
+    padding-top: 10px;
+    margin-right: 8%;
+    margin-left: 8%;
+}
 
-    
 .logo {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    min-width: 0;
+    min-height: 0;
+
     a {
         text-decoration: none;
         color: white;
@@ -30,66 +35,951 @@ header {
     }
 }
 
-    .navLinks {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: nowrap;
-        li {
-            list-style: none;
-            :hover {
-                color: #65E4A3;
-                transition: 0.5s;
-            }
-        }
-        
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-    
-        .logInButton {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 700;
-            color: #0A2640;
-            background-color: white;
-            border-radius: 20px;
-            font-size: 1.25rem;
-            width: 128px;
-            height: 40px;
-            cursor: pointer;
-            border: 0;
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+
+    li {
+        list-style: none;
+
+        :hover {
+            color: rgb(170, 170, 170, 170);
+            transition: 0.2s;
         }
     }
 
-    .toggleNavButton {
-        width: 30px;
+    a {
+        text-decoration: none;
         color: white;
-        height: 50px;
-        width: 50px;
-        margin: 10px 10px;
+        font-size: 1rem;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .logInButton {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: #0A2640;
+        background-color: white;
+        border-radius: 20px;
+        font-size: 1.25rem;
+        width: 128px;
+        height: 40px;
+        cursor: pointer;
+        border: 0;
+    }
+}
+
+.toggleNavButton {
+    width: 30px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    display: none;
+}
+
+.dropdownMenu {
+    display: none;
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .logInDropdown {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: #0A2640;
+        background-color: white;
+        border-radius: 20px;
+        font-size: 1.25rem;
+        width: 128px;
+        height: 40px;
+        cursor: pointer;
+        border: 0;
+    }
+}
+
+.headerInfoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    height: 423px;
+    margin: 3% 8% 0 8%;
+}
+
+.headerText {
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+
+    img {
         display: none;
+    }
+}
+
+.headerTextButtons {
+    display: flex;
+    gap: 5%;
+    
+    :hover {
+        color: lightgray;
+        transition: 0.2s;
+    }
+}
+
+.headerTextButton {
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 56px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.postButton {
+    background-color: #65E4A3;
+    width: 247px;
+}
+
+.exploreButton {
+    border: solid white 1px;
+    background-color: #0A2640;
+    color: white;
+    width: 187px;
+}
+
+
+.headerImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .headerBottomImages {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .headerImage {
+        min-width: 0;
+        min-height: 0;
+    }
+}
+
+.logoWall {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 140px;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100vw;
+}
+
+.logoWallImage {
+    min-width: 0;
+    min-height: 0;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.servicesHeading {
+    text-align: center;
+    max-width: 842px;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: gray;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        font-size: 3rem;
+        margin: 0;
+    }
+}
+
+.servicesList {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    min-width: 0;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: gray;
+        margin-top: 10px;
+    }
+    
+    img {
+        min-width: 0;
+        min-height: 0;
+    }
+}
+
+.serviceLink {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
+
+footer {
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    gap: 10%;
+    background-color: lightgray;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+
+    a {
+        text-decoration: none;
+    }
+
+    h6 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}
+
+.footerInfo {
+    max-width: 300px;
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: gray;
+        font-size: 1rem;
+    }
+}
+
+.footerLogo {
+    a {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: black
+    }
+}
+
+.darkLogo {
+    height: 24px;
+}
+
+.connectInfoWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.connectInfo {
+    display: flex;
+    gap: 110px;
+}
+
+.connectText {
+    display: flex;
+    flex-direction: column;
+    max-width: 493px;
+
+    h4 {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        font-size: 2.25rem;
+    }
+
+    button {
+        border: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: white;
+        background-color: #0A2640;
+        width: 210px;
+        height: 60px;
+        border-radius: 56px;
+        font-size: 1.25rem;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+}
+
+.benefit {
+    display: flex;
+    gap: 15px;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+    }
+}
+
+.reviewsWrapper {
+    height: 798px;
+    background-color: #0A2640;
+    display: flex;
+    justify-content: center;
+}
+
+.reviewsHeader {
+    text-align: center;
+    h3 {
+        font-family: 'Manrope', sans-serif;
+        color: white;
+        font-weight: 400;
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+    
+    button {
+        border: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        background-color: #65E4A3;
+        width: 300px;
+        height: 60px;
+        border-radius: 56px;
+        font-size: 1.25rem;
+        margin-top: 30px;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+}
+
+.reviewsInfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.blogWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        border: solid black 2px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        background-color: white;
+        width: 219px;
+        height: 60px;
+        border-radius: 56px;
+        font-size: 1.25rem;
+        margin-top: 30px;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+}
+
+.blogHeading {
+    text-align: center;
+    max-width: 842px;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: grey;
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        font-size: 2.5rem;
+    }
+}
+
+.blogContent {
+    display: flex;
+    gap: 100px
+}
+
+.blogPage {
+    max-width: 300px;
+
+    >p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+    }
+}
+
+.pageTitle {
+    display: flex;
+    gap: 10px;
+
+    h6 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        margin: 20px 0 0 0;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: gray;
+        margin: 20px 0 0 0;
+    }
+}
+
+.pageAuthor {
+    display: flex;
+    gap: 10px;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+}
+
+.subscribeWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 391px;
+    width: 1200px;
+    background-color: #0A2640;
+    border-radius: 56px;
+    margin-bottom: 150px;
+
+    h3 {
+        font-family: 'Manrope', sans-serif;
+        text-align: center;
+        font-weight: 400;
+        color: white;
+        font-size: 3rem;
+    }
+
+    input {
+        border: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        background-color: white;
+        text-align: center;
+        width: 370px;
+        height: 40px;
+        border-radius: 56px;
+        font-size: 1.25rem;
+        margin-top: 30px;
+        cursor: text;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    button {
+        border: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        background-color: #65E4A3;
+        width: 219px;
+        height: 60px;
+        border-radius: 56px;
+        font-size: 1.25rem;
+        margin-top: 30px;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+}
+
+.form {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    .reviewsWrapper {
+        height: fit-content;
+    }
+    .reviewsInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 1150px) {
+    .headerTextButtons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .servicesList {
+        flex-direction: column;
+    }
+
+    .service {
+        text-align: center;
+        min-width: 0;
+        min-height: 0;
+
+        *{
+        min-width: 0;
+        min-height: 0;
+        }
+    }
+
+    .serviceLink {
+        min-width: 0;
+        min-height: 0;
+        justify-content: center;
+    }
+
+    .connectInfo {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .connectText {
+        h4 {
+            margin-top: 0;
+        }
+
+        button {
+            align-self: center;
+        }
+    }
+
+    .connectLogo {
+        width: 350px;
+    }
+    
+    .benefit {
+        flex-direction: column;
+        align-items: center;
+        img {
+            max-width: 100px;
+        }
+    }
+
+    .blogContent {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 915px) {
+    .headerImages {
+        height: 326.4px;
+        width: auto;
+
+        .headerTopImage {
+            height: 185.6px;
+            width: auto;
+        }
+
+        .headerBottomImage {
+            height: 132.8px;
+            width: auto;
+        }
     }
 }
 
 
 @media (max-width: 800px) {
-    .nav {
-        .logo {
-            align-self: flex-start;
+    .logo {
+        align-self: flex-start;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .toggleNavButton {
+        display: block;
+        cursor: pointer;
+    }
+
+    .dropdownMenu {
+        position: absolute;
+        right: 10px;
+        top: 100px;
+        background-color: rgba(128, 128, 128);
+        border-radius: 30px;
+
+        .dropdownLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            margin: 0;
+            li :hover {
+                color: lightblue;
+                transition: 0.2s;
+            } 
+            
+        }
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .headerText {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -25%;
+    }
+
+    .headerTextButtons {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .headerTextButton {
+        align-self: center;
+    }
+
+    .postButton {
+        margin-bottom: 15px;
+    }
+
+    .headerText img {
+        display: flex;
+        margin-top: 5%;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .headerInfoWrapper {
+        .headerText {
+            text-align: center;
         }
 
-        .navLinks {
+        .headerImages {
             display: none;
+        }
+    }
+
+    .footerColumn {
+        gap: 0;
+    }
+
+    .subscribe {
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+
+        input, button {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        
+        h6 {
+            margin: 0
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .logoWall {
+        top: 200px;
+    }
+
+    .headerText h1 {
+        font-size: 2rem;
+        text-wrap: wrap;
+    }
+
+    .headerText p {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .connectInfo {
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .connectLogo {
+        width: 150px;
+    }
+
+    .connectText {
+        button {
+            width: 150px;
+        }
+    }
+
+    .reviewsHeader {
+        h3 {
+            font-size: 2rem;
+        }
+        
+        button {
+            width: 150px;
+        }
+    }
+
+    .reviewsInfo {
+        img {
+            width: 400px;
+        }
+    }
+
+    .form {
+        input {
+            width: 250px;
+        }
+    }
+
+    .blogHeading {
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    header {
+        height: 500px;
+    }
+
+    .headerInfoWrapper {
+        height: 300px;
+    }
+
+    .logoWall {
+        top: 70px;
+    }
+
+    .nav {
+        .logo {
+            img {
+                width: 14px;
+            }
+
+            a {
+                font-size: 1.4rem
+            }
         }
 
         .toggleNavButton {
-            display: block;
-            cursor: pointer;
+            width: 20px;
+            margin-top: 7%;
+            height: 0px;
         }
     }
+
+    .postButton {
+        width: 140px;
+    }
+
+    .exploreButton {
+        width: 140px;
+    }
+
+    .dropdownMenu {
+        top: 6.5%;
+    }
+
+    .headerText img {
+        display: none;
+    }
+    
+    .dropdownLinks {
+        a {
+            font-size: 1rem;
+        }
+
+        .logInDropdown {
+            font-size: 1rem;
+            width: 60.91px;
+        }
+    }
+
+    .servicesHeading {
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .serviceLogo {
+        width: 140px;
+        align-self: center;
+    }
+
+    .reviewsInfo {
+        img {
+            width: 280px;
+        }
+    }
+
+    .blogWrapper {
+        button {
+            width: 150px;
+        }
+    }
+
+    .blogPage {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >img {
+            width: 200px;
+        }
+    }
+    
+    .pageTitle {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .subscribe {
+        h3 { 
+            font-size: 1.5rem;
+        }
+
+        button {
+            width: 150px;
+        }
+    }
+    .form {
+        input {
+            width: 150px;
+            font-size: 1rem;
+        }
+    }
+
+}
+
+@media (max-width: 280px) {
+    .headerText h1 {
+        font-size: 1.5rem;
+    }
+
+    .headerText p {
+        font-size: 0.7rem;
+    }
+
+    .postButton {
+        width: 110px;
+        font-size: smaller;
+    }
+
+    .exploreButton {
+        width: 100px;
+        font-size: smaller;
+    }
+    .reviewsInfo {
+        img {
+            width: 150px;
+        }
+    }
+
 }
